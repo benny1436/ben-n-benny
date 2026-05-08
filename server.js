@@ -8,6 +8,10 @@ app.get('/', async (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
 
+app.get(['/helvite/privacy', '/helvite/privacy/'], async (req, res) => {
+    res.sendFile(path.join(__dirname, 'privacy.html'));
+});
+
 app.listen(8080, () => {
     console.log("Server successfully running on port 8080");
 });
